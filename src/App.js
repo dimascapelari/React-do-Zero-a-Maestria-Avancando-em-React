@@ -41,8 +41,9 @@ function App() {
       <CarDetails brand="Ford" km={0} color="Vermelho" newCar={true} />
       <CarDetails brand="Fiat" km={4500} color="Branco" newCar={false} />
       {/* loop em array de objetos */}
-      {cars.map((car) => (
+      {cars.map((car, id) => (
         <CarDetails
+          key={id}
           brand={car.brand}
           km={car.km}
           color={car.color}
