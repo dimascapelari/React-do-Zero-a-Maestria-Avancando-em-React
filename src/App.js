@@ -27,8 +27,11 @@ function App() {
       <ConditionalRender />
       {/* props */}
       <ShowUserName name={userName} />
-      {/* destructuring */}
-      <CarDetails brand="VW" km={100000} color="Azul" />
+      {/* destructuring em props */}
+      <CarDetails brand="VW" km={100000} color="Azul" newCar={false} />
+      {/* reaproveitamento de componentes */}
+      <CarDetails brand="Ford" km={0} color="Vermelho" newCar={true} />
+      <CarDetails brand="Fiat" km={4500} color="Branco" newCar={false} />
     </div>
   );
 }
