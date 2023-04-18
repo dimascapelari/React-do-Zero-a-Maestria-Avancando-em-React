@@ -11,6 +11,7 @@ import Container from "./components/Container";
 import ExecuteFunction from "./components/ExecuteFunction";
 import Message from "./components/Message";
 import ChangeMessageState from "./components/ChangeMessageState";
+import UserDetails from "./components/UserDetails";
 
 function App() {
   // const name = "Dimas Capelari";
@@ -31,6 +32,12 @@ function App() {
   const handleMessage = (msg) => {
     setMessage(msg);
   };
+
+  const userDetails = [
+    { id: 1, nome: "Dimas", sexo: "Masculino", idade: 40 },
+    { id: 2, nome: "Mariana", sexo: "Feminino", idade: 38 },
+    { id: 3, nome: "Maria Luiza", sexo: "Faminino", idade: 11 },
+  ];
 
   return (
     <div className="App">
@@ -79,6 +86,16 @@ function App() {
       {/* state lift */}
       <Message msg={message} />
       <ChangeMessageState handleMessage={handleMessage} />
+      <hr />
+      {/* Desafio 4 */}
+      {userDetails.map((user) => (
+        <UserDetails
+          key={user.id}
+          nome={user.nome}
+          sexo={user.sexo}
+          idade={user.idade}
+        />
+      ))}
     </div>
   );
 }
