@@ -53,7 +53,9 @@ function App() {
       <Fragment propFragment="teste" />
       {/* children */}
       <Container myValue="testing">
-        <p>E este é o conteúdo</p>
+        <div>
+          <p>E este é o conteúdo do container 1</p>
+        </div>
       </Container>
       <Container myValue="testing 2">
         <h5>Testando o container</h5>
